@@ -126,22 +126,14 @@ function init() {
         }
     ])
     .then((response) => {
-        console.log("test");
+        genMarkdwn.generateMarkdown(response);
+
+        // test file
+        // fs.writeFile('test.txt', JSON.stringify(response, null, '\t'), (err) =>
+        // err ? console.error(err) : console.log('Success!'))
     });
-    }
+}
 
-    
-    // ]).then((response) =>
-    //     // adds data as text
-    //     // fs.appendFile('answers.txt', `Name: ${response.name}\nLanguages: ${response.languages}\nCommunication: ${response.communication}\n`, (err) =>
-    //     //     err ? console.error(err) : console.log('Success!')
-    //     // )
-
-    //     // or this creates the info as a json style item
-    //     fs.appendFile('answers.txt', JSON.stringify(response, null, '\t'), (err) =>
-    //     err ? console.error(err) : console.log('Success!'))
-    // );
-// }
 
 // Function call to initialize app
 init();

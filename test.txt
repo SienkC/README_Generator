@@ -1,0 +1,11 @@
+{
+	"title": "Hello",
+	"description": "No",
+	"installation": ": )",
+	"usage": "Use",
+	"lisence": "MIT",
+	"contributing": "No ; )",
+	"tests": "No",
+	"github": "f",
+	"email": "f@"
+}
