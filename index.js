@@ -62,38 +62,73 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
+// function writeToFile(fileName, data) {
 
-}
+// }
 
 function init() {
     // Ask user questions in terminal
-    questions.forEach(question => {
-        if(question.choices) {
-            inquirer
-            .prompt(
-                {
-                    type: question.type,
-                    message: question.message,
-                    choices: question.choices,
-                    name: question.name
-                }
-            )
-            .then()
+    inquirer
+    .prompt([
+        {
+            type: questions[0].type,
+            message: questions[0].message,
+            choices: questions[0].choices,
+            name: questions[0].name
+        },
+        {
+            type: questions[1].type,
+            message: questions[1].message,
+            choices: questions[1].choices,
+            name: questions[1].name
+        },
+        {
+            type: questions[2].type,
+            message: questions[2].message,
+            choices: questions[2].choices,
+            name: questions[2].name
+        },
+        {
+            type: questions[3].type,
+            message: questions[3].message,
+            choices: questions[3].choices,
+            name: questions[3].name
+        },
+        {
+            type: questions[4].type,
+            message: questions[4].message,
+            choices: questions[4].choices,
+            name: questions[4].name
+        },
+        {
+            type: questions[5].type,
+            message: questions[5].message,
+            choices: questions[5].choices,
+            name: questions[5].name
+        },
+        {
+            type: questions[6].type,
+            message: questions[6].message,
+            choices: questions[6].choices,
+            name: questions[6].name
+        },
+        {
+            type: questions[7].type,
+            message: questions[7].message,
+            choices: questions[7].choices,
+            name: questions[7].name
+        },
+        {
+            type: questions[8].type,
+            message: questions[8].message,
+            choices: questions[8].choices,
+            name: questions[8].name
         }
-        else {
-            inquirer
-            .prompt(
-                {
-                    type: question.type,
-                    message: question.message,
-                    name: question.name
-                }
-            )
-            .then()
-        }
-        
+    ])
+    .then((response) => {
+        console.log("test");
     });
+    }
 
     
     // ]).then((response) =>
@@ -106,7 +141,7 @@ function init() {
     //     fs.appendFile('answers.txt', JSON.stringify(response, null, '\t'), (err) =>
     //     err ? console.error(err) : console.log('Success!'))
     // );
-}
+// }
 
 // Function call to initialize app
 init();
