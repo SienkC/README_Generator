@@ -22,7 +22,7 @@ const questions = [
     },
     {
         type:'input',
-        message:'Please provide usage intructions.',
+        message:'Please provide installation intructions.',
         choices:null,
         name:'installation'
     },
