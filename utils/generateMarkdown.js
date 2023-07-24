@@ -129,6 +129,7 @@ function generateMarkdown(data) {
 `;
 }
 
+// enables function on index.js
 module.exports = {
   generateMarkdown : generateMarkdown
 };

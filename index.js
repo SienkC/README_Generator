@@ -1,8 +1,9 @@
-// TODO: Include packages needed for this application
+// Includes packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 const genMarkdwn = require('./utils/generateMarkdown');
 
+// Variable to hold responses
 let content = '';
 
 // Array of questions for user input
@@ -144,11 +145,10 @@ function init() {
         }
     ])
     .then((response) => {
-        // test
-        console.log(response.license);
-
+        // Get README text content
         content = genMarkdwn.generateMarkdown(response);
 
+        // Create the file using created content
         writeToFile('./result/README.md', content);
     });
 }
