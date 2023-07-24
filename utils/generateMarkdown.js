@@ -70,7 +70,7 @@ function renderLicenseSection(license) {
     return ``;
   }
   else {
-    return `## License
+    return `## License <a id="license"></a>
 
   Licensed under [${license}](LICENSE)`;
   }
@@ -83,32 +83,43 @@ function generateMarkdown(data) {
   return `# ${data.title} ${renderLicenseLink(data.license)}
 
 
-  ## Description
+  ## Table of Contents
+
+  1. [Description](#description)
+  2. [Installation](#installation)
+  3. [Usage](#usage)
+  4. [Contributing](#contributing)
+  5. [Tests](#tests)
+  6. [Questions](#questions)
+  7. [License](#license)
+
+
+  ## Description <a id="description"></a>
 
   ${data.description}
 
 
-  ## Installation
+  ## Installation <a id="installation"></a>
 
   ${data.installation}
 
 
-  ## Usage
+  ## Usage <a id="usage"></a>
 
   ${data.usage}
 
 
-  ## Contributing
+  ## Contributing <a id="contributing"></a>
 
   ${data.contributing}
 
 
-  ## Tests
+  ## Tests <a id="tests"></a>
 
   ${data.tests}
 
 
-  ## Questions
+  ## Questions <a id="questions"></a>
 
   Github: [${data.github}](${data.github !== 'N/A' ? 'https://github.com/' + data.github : data.github})
   
