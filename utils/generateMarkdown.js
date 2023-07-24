@@ -1,6 +1,8 @@
 // license links
 let links = ['none', 'none',
   'MIT', 'https://opensource.org/license/mit/',
+  'Academic Free License v3.0', 'https://opensource.org/license/afl-3-0-php/',
+  'Apache license 2.0', 'https://opensource.org/license/apache-2-0/',
   'Artistic license 2.0',	'https://opensource.org/license/artistic-2-0/',
   'Boost Software License 1.0',	'https://opensource.org/license/bsl-1-0/',
   'BSD 2-clause "Simplified" license',	'https://opensource.org/license/bsd-2-clause/',
@@ -42,7 +44,7 @@ function renderLicenseBadge(license) {
     return '';
   }
   else {
-    return `https://img.shields.io/badge/License-${license}-blue.svg`;
+    return `https://img.shields.io/badge/License-${license.replace(/ /g, "_")}-blue.svg`;
   }
 }
 
@@ -70,7 +72,7 @@ function renderLicenseSection(license) {
   else {
     return `## License
 
-    Licensed under [${license}](LICENSE)`;
+  Licensed under [${license}](LICENSE)`;
   }
 }
 
@@ -109,6 +111,7 @@ function generateMarkdown(data) {
   ## Questions
 
   Github: [${data.github}](${data.github !== 'N/A' ? 'https://github.com/' + data.github : data.github})
+  
   For any questions please reach out to me at ${data.email}.
 
 

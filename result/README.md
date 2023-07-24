@@ -1,4 +1,4 @@
-# Title [![License: undefined](https://img.shields.io/badge/License-undefined-blue.svg)](none)
+# N/A [![License: Apache license 2.0](https://img.shields.io/badge/License-Apache_license_2.0-blue.svg)](https://opensource.org/license/apache-2-0/)
 
 
   ## Description
@@ -18,7 +18,7 @@
 
   ## Contributing
 
-  No
+  N/A
 
 
   ## Tests
@@ -29,10 +29,11 @@
   ## Questions
 
   Github: [SienkC](https://github.com/SienkC)
+  
   For any questions please reach out to me at sienkiewichc@gmail.com.
 
 
   ## License
 
-    Licensed under [undefined](LICENSE)
+  Licensed under [Apache license 2.0](LICENSE)
 
