@@ -55,8 +55,9 @@ function renderLicenseLink(license) {
   if(license === 'none'){
     return ``;
   }
+  // adds link to badge in markdown
   else {
-    return ``;
+    return `[![License: ${license}](${renderLicenseBadge(license)})](${licLink})`;
   }
 }
 
