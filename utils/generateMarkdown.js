@@ -70,7 +70,7 @@ function renderLicenseSection(license) {
   else {
     return `## License
 
-    Licensed under [${data.license}](LICENSE)`;
+    Licensed under [${license}](LICENSE)`;
   }
 }
 
@@ -117,4 +117,6 @@ function generateMarkdown(data) {
 `;
 }
 
-module.exports = generateMarkdown;
+module.exports = {
+  generateMarkdown : generateMarkdown
+};

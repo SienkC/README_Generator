@@ -1,7 +1,9 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const genMarkdwn = require('./utils/generateMarkdown.js');
+const genMarkdwn = require('./utils/generateMarkdown');
+
+let content = '';
 
 // Array of questions for user input
 const questions = [
@@ -61,10 +63,17 @@ const questions = [
     }
 ];
 
-// TODO: Create a function to write README file
-// function writeToFile(fileName, data) {
+// function to write README file
+function writeToFile(fileName, data) {
+    // Create folder for result so README.md for this application is not overridden
+    if(!(fs.existsSync('./result'))){
+        fs.mkdir('./result', (err) =>
+        err ? console.error(err) : console.log('Created result folder'));
+    }
 
-// }
+    fs.writeFile(fileName, data, (err) =>
+    err ? console.error(err) : console.log('Your README has been created! Please check the result folder!'));
+}
 
 function init() {
     // Ask user questions in terminal
@@ -135,14 +144,22 @@ function init() {
         }
     ])
     .then((response) => {
-        // genMarkdwn.generateMarkdown(response);
+        // test
+        console.log(response.title);
 
-        // test file
-        fs.writeFile('test.txt', JSON.stringify(response, null, '\t'), (err) =>
-        err ? console.error(err) : console.log('Success!'))
+        content = genMarkdwn.generateMarkdown(response);
+
+        writeToFile('./result/README.md', content);
+
+        // // test file
+        // fs.writeFile('test.txt', JSON.stringify(response, null, '\t'), (err) =>
+        // err ? console.error(err) : console.log('Success!'))
     });
 }
 
 
 // Function call to initialize app
 init();
+
+
+
