@@ -80,7 +80,7 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
 
 
-  return `# ${data.title} ${renderLicenseLink(data.license)}
+  return `# ${data.title}    ${renderLicenseLink(data.license)}
 
 
   ## Description
@@ -92,10 +92,10 @@ function generateMarkdown(data) {
 
   1. [Installation](#installation)
   2. [Usage](#usage)
-  3. [Contributing](#contributing)
-  4. [Tests](#tests)
-  5. [Questions](#questions)
-  6. [License](#license)
+  3. [License](#license)
+  4. [Contributing](#contributing)
+  5. [Tests](#tests)
+  6. [Questions](#questions)
 
 
   ## Installation <a id="installation"></a>
@@ -106,6 +106,9 @@ function generateMarkdown(data) {
   ## Usage <a id="usage"></a>
 
   ${data.usage}
+
+
+  ${renderLicenseSection(data.license)}
 
 
   ## Contributing <a id="contributing"></a>
@@ -123,10 +126,6 @@ function generateMarkdown(data) {
   Github: [${data.github}](${data.github !== 'N/A' ? 'https://github.com/' + data.github : data.github})
   
   For any questions please reach out to me at ${data.email}.
-
-
-  ${renderLicenseSection(data.license)}
-
 `;
 }
 
