@@ -15,19 +15,19 @@ const questions = [
     },
     {
         type:'input',
-        message:'Write a description of your application.',
+        message:'Enter a description of your application.',
         choices:null,
         name:'description'
     },
     {
         type:'input',
-        message:'Write a summary of how to install your application.',
+        message:'Please provide usage intructions.',
         choices:null,
         name:'installation'
     },
     {
         type:'input',
-        message:'Write a summary of how to use your application.',
+        message:'Please provide usage information.',
         choices:null,
         name:'usage'
     },
@@ -39,13 +39,13 @@ const questions = [
     },
     {
         type:'input',
-        message:'Write a summary of how others can contribute to your application.',
+        message:'Please provide contributing guidelines.',
         choices:null,
         name:'contributing'
     },
     {
         type:'input',
-        message:'Write how to test your application.',
+        message:'Please enter testing instructions.',
         choices:null,
         name:'tests'
     },
